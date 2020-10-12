@@ -1,8 +1,8 @@
 // app.js
 
-var express = require('express');
-  , app = express();
-  , indexRouter = require('./routes/index');
+var express = require('express')
+  , app = express()
+  , indexRouter = require('./routes/index')
   , sequelize = require('./models/index').sequelize;
 const PORT = process.env.PORT || 3000;
 

@@ -14,18 +14,18 @@ return sequelize.define('place', {
     allowNull: false,
   },
   like: {
-    type: DataTypes.INTEGER.UNSIGNED(10),
+    type: DataTypes.INTEGER.UNSIGNED,
     allowNull: true,
   },
   dislike: {
-    type: DataTypes.INTEGER.UNSIGNED(10),
+    type: DataTypes.INTEGER.UNSIGNED,
     allowNull: true,
   },
   recomrate: {
     type: DataTypes.DOUBLE,
     allowNull: true,
   }
-}, 
+},
   {
     timestamps: false
   });
