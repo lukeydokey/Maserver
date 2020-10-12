@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.get('/', function(req, res, next) {
   res.send('index page');
-});
+})
 
 //user routing
-router.use('/place', require('./place/index'));
+router.use('/get_restau_info', require('./get_restau_info'));
 
 module.exports = router;
