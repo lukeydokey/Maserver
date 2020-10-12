@@ -1,2 +1,2 @@
 #server practice
-서버 구축 연습
+Ma 서버 - DB 연동 by sequelize
