@@ -7,5 +7,6 @@ router.get('/', function(req, res, next) {
 
 //user routing
 router.use('/get_restau_info', require('./get_restau_info'));
+router.use('/upload', require('./upload'));
 
 module.exports = router;
