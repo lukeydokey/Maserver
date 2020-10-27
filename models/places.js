@@ -1,5 +1,10 @@
 module.exports =(sequelize, DataTypes) => {
-return sequelize.define('place', {
+return sequelize.define('places', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
   placeid: {
     type: DataTypes.INTEGER.UNSIGNED,
     allowNull: false,
@@ -24,9 +29,15 @@ return sequelize.define('place', {
   recomrate: {
     type: DataTypes.DOUBLE,
     allowNull: true,
+  },
+  address: {
+    type: DataTypes.STRING(45),
+    allowNull: false,
   }
 },
   {
-    timestamps: false
+    timestamps: false,
+    freezeTableName : true,
+    tableName : 'places'
   });
 };

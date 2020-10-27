@@ -3,15 +3,16 @@ const router = express.Router();
 
 //정보 업로드
 router.post('/', (req, res) =>{
-    console.log('<<place/upload>>');
-    const { Place } = require('../../models');
-    Place.create({
+    console.log('<<places/upload>>');
+    const { Places } = require('../../models');
+    Places.create({
         placeid : req.body.placeid,
         placename : req.body.placename,
         category : req.body.category,
         like : req.body.like,
         dislike : req.body.dislike,
-        recomrate : req.body.recomrate
+        recomrate : req.body.recomrate,
+        address : req.body.address
     }).then(() => {
         res.send(true);
     }).catch(()=>{
