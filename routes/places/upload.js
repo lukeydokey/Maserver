@@ -12,7 +12,8 @@ router.post('/', (req, res) =>{
         like : req.body.like,
         dislike : req.body.dislike,
         recomrate : req.body.recomrate,
-        address : req.body.address
+        address : req.body.address,
+        phoneNum : req.body.phoneNum
     }).then(() => {
         res.send(true);
     }).catch(()=>{

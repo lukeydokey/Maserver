@@ -33,6 +33,10 @@ return sequelize.define('places', {
   address: {
     type: DataTypes.STRING(45),
     allowNull: false,
+  },
+  phoneNum: {
+    type: DataTypes.STRING(45),
+    allowNull: false,
   }
 },
   {
