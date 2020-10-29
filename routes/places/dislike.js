@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/:id/:like/:dislike', (req, res)=> {
   var place_id = req.params.id;
   var place_like = Number(req.params.like);
-  var place_dislike = Number(req.params.dislike + 1);
+  var place_dislike = Number(req.params.dislike) + 1;
   if (place_like != 0) {
     var place_recomrate = ((place_like) / ( place_like + place_dislike) * 100).toFixed(2);
   }
