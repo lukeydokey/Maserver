@@ -1,9 +1,22 @@
 module.exports =(sequelize, DataTypes) => {
-return sequelize.define('user', {
+return sequelize.define('prefer', {
   userid: {
     type: DataTypes.STRING(60),
     primaryKey : true,
     allowNull: false
+  },
+  placeid: {
+    type: DataTypes.STRING(60),
+    primaryKey : true,
+    allowNull: false
+  },
+  liked: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: 0
+  },
+  disliked: {
+    type: DataTypes.BOOLEAN,
+    defaultValue : 0
   },
   sex: {
     type: DataTypes.STRING(10),
@@ -17,14 +30,7 @@ return sequelize.define('user', {
   {
     timestamps: false,
     freezeTableName : true,
-    tableName : 'user'
+    tableName : 'prefer'
   });
-  prefer.associate = function(models){
-    models.User.hasMany(models.Prefer,{
-      foreignKey: 'userid',
-      foreignKey: 'sex',
-      foreignKey: 'age',
-      onDelete : 'cascade'
-    });
-  };
+
 };

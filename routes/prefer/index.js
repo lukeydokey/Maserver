@@ -6,8 +6,7 @@ router.get('/', (req, res, next) => {
 });
 
 //user routing
-router.use('/places', require('./places/index'));
-router.use('/user', require('./user/index'));
-router.use('/prefer', require('./prefer/index'));
+router.use('/update', require('./update'));
+router.use('/get_prefer_info', require('./get_prefer_info'));
 
 module.exports = router;

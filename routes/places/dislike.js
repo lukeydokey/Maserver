@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 //싫어요 + 1
-router.get('/:id/:like/:dislike', (req, res)=> {
-  var place_id = req.params.id;
+router.get('/:pid/:like/:dislike', (req, res)=> {
+  var place_id = req.params.pid;
   var place_like = Number(req.params.like);
   var place_dislike = Number(req.params.dislike) + 1;
   if (place_like != 0) {
@@ -20,7 +20,7 @@ router.get('/:id/:like/:dislike', (req, res)=> {
     },
       {
       where : {
-        id : place_id
+        placeid : place_id
       }
     }).then((places)=> {
       res.json({"result" : 'ok' , "places" : places});

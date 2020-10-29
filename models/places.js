@@ -44,4 +44,10 @@ return sequelize.define('places', {
     freezeTableName : true,
     tableName : 'places'
   });
+  prefer.associate = function(models){
+    models.Places.hasMany(models.Prefer,{
+      foreignKey: 'placeid',
+      onDelete : 'cascade'
+    });
+  };
 };

@@ -36,5 +36,6 @@ db.Sequelize = Sequelize;
 
 db.Places = require('./places') (sequelize, Sequelize);
 db.User = require('./user') (sequelize, Sequelize);
+db.Prefer = require('./prefer') (sequelize, Sequelize);
 
 module.exports = db;
