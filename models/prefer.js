@@ -6,7 +6,7 @@ return sequelize.define('prefer', {
     allowNull: false
   },
   placeid: {
-    type: DataTypes.STRING(60),
+    type: DataTypes.INTEGER.UNSIGNED,
     primaryKey : true,
     allowNull: false
   },

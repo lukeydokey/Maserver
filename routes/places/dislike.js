@@ -35,7 +35,7 @@ router.get('/:pid/:like/:dislike', (req, res)=> {
     },
       {
       where : {
-        id : place_id
+        placeid : place_id
       }
     }).then((places)=> {
       res.json({"result" : 'ok' , "places" : places});

@@ -1,14 +1,9 @@
 module.exports =(sequelize, DataTypes) => {
 return sequelize.define('places', {
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true
-  },
   placeid: {
     type: DataTypes.INTEGER.UNSIGNED,
     allowNull: false,
-    unique: true,
+    primaryKey: true,
   },
   placename: {
     type: DataTypes.STRING(45),
