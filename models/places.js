@@ -3,6 +3,7 @@ return sequelize.define('places', {
   placeid: {
     type: DataTypes.INTEGER.UNSIGNED,
     allowNull: false,
+    autoIncrement : true,
     primaryKey: true,
   },
   placename: {

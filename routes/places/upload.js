@@ -6,7 +6,6 @@ router.post('/', (req, res) =>{
     console.log('<<places/upload>>');
     const { Places } = require('../../models');
     Places.create({
-        placeid : req.body.placeid,
         placename : req.body.placename,
         category : req.body.category,
         like : req.body.like,
